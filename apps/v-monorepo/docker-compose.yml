@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  mysql-db:
+    image: mysql:latest
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: mysql
+      MYSQL_DATABASE: vmoporepo
+      MYSQL_USER: mysql
+      MYSQL_PASSWORD: mysql
+    ports:
+      - "3306:3306"
